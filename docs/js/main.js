@@ -2,7 +2,7 @@ $(function () {
   var locale = localStorage.getItem('locale') || 'zh';
   setLocale(locale);
   setNavActive();
-
+  console.log('hi');
   $(window).scroll(tryShowToTopBtn);
   tryShowToTopBtn();
   $('.back-to-top-btn').on('click', scrollToTop);
@@ -46,7 +46,6 @@ function setLocale(locale) {
       function () {
         $.i18n().locale = locale;
         $('body').i18n();
-
         $('.switch-locale').show();
         var localeText = $('.switch-locale[data-locale="' + locale + '"]').hide().text();
         $('.lang-selector').html(localeText).prop("disabled", false);
