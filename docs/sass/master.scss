@@ -3,7 +3,8 @@
 
 body {
     // font-family: "Helvetica", "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    font-family: "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    font-family: "Arial", "Yu Gothic", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    
     // text-align: justify !important;
     // text-justify:inter-ideograph !important;
 }
@@ -47,6 +48,7 @@ header {
     }
     .lang-selector-dropdown {
         .lang-selector {
+            padding: 0;
             @include lang-selector;
             &::after {
                 content: none;
