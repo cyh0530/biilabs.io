@@ -20,7 +20,7 @@ $(function () {
       selection: false
     });
 
-    fabric.Image.fromURL("assets/about-banner-bg.png", function (img) {
+    fabric.Image.fromURL("assets/about/about-banner-bg.png", function (img) {
       // add background image
       canvas.setBackgroundImage(img, canvas.renderAll.bind(canvas), {
         scaleX: canvas.width / img.width,
@@ -28,7 +28,7 @@ $(function () {
       });
     });
 
-    fabric.Image.fromURL("assets/about-banner-people.png", function (img) {
+    fabric.Image.fromURL("assets/about/about-banner-people.png", function (img) {
       img.set({
         // scaleX: ICON_SIZE / img.width,
         // scaleY: ICON_SIZE / img.height,
