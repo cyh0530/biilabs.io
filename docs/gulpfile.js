@@ -9,6 +9,7 @@ const connectRewrite = require('connect-modrewrite');
 const inject = require('gulp-inject');
 const cleanCSS = require('gulp-clean-css')
 const htmlmin = require('gulp-htmlmin');
+const webp = require('gulp-webp')
 
 sass.compiler = require('node-sass');
 
@@ -78,9 +79,16 @@ gulp.task('watch', function () {
     gulp.watch(['src/**/*.html', 'src/**/*.ejs'], gulp.series('html'));
 });
 
-gulp.task('default', gulp.series('clean', 'sass', 'js', 'html', gulp.parallel('webserver', 'watch'), function (done) {
+gulp.task('webp', () =>
+    gulp.src(['static/assets/**/*.png'])
+        .pipe(webp())
+        .pipe(gulp.dest('dist/webp'))
+);
+
+gulp.task('default', gulp.series('clean', 'webp', 'sass', 'js', 'html', gulp.parallel('webserver', 'watch'), function (done) {
     done();
 }));
+
 
 // ----- gulp dev end ----- //
 
