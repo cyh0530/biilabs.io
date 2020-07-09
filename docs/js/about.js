@@ -179,13 +179,13 @@ $(function () {
     }
     function hideMilestoneText() {
       console.log("hideMilestoneText")
-      var $svg = $('#milestone-svg').contents().find('svg')
+      var $svg = $('#milestone-svg')
       console.log("$svg.find('text.fade-in')", $svg.find('text.fade-in'))
       $svg.find('text.fade-in').css({ opacity: 0 });
     }
     function showMileStoneText() {
       // console.log("showMileStoneText")
-      var $svg = $('#milestone-svg').contents().find('svg')
+      var $svg = $('#milestone-svg')
       $svg.find('text.fade-in').animate({ opacity: 1 }, 'slow', 'swing');
     }
   }
@@ -217,7 +217,7 @@ $(function () {
 })
 
 function setLocaleCallback() {
-  $('#milestone-svg').contents().find('svg').find('text[data-i18n]').each(function (idx, item) {
+  $('#milestone-svg').find('text[data-i18n]').each(function (idx, item) {
     var $dom = $(item)
     var text = $.i18n($dom.data('i18n'))
     $dom.html(text)

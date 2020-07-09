@@ -2,7 +2,6 @@ $(function () {
   var locale = localStorage.getItem('locale') || 'zh';
   setLocale(locale);
   setNavActive();
-  console.log('hi');
   $(window).scroll(tryShowToTopBtn);
   tryShowToTopBtn();
   $('.back-to-top-btn').on('click', scrollToTop);
@@ -40,6 +39,10 @@ function setLocale(locale) {
   $('.lang-selector').html('<span class="spinner-border" role="status" aria-hidden="true" style="width: 1.5rem; height: 1.5rem;"></span>  <span class="sr-only">Loading...</span>').prop("disabled", true);
 
   if (locale) {
+    $('body').removeClass('jp-font');
+    if (locale === 'jp') {
+      $('body').addClass('jp-font');
+    }
     localStorage.setItem('locale', locale);
 
     $.i18n().load('i18n/' + locale + '.json', locale).done(

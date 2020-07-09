@@ -3,10 +3,17 @@
 
 body {
     // font-family: "Helvetica", "Arial", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
-    font-family: "Yu Gothic", "YuGothic", Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      
+    font-family: Arial, "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+
+    
     
     // text-align: justify !important;
     // text-justify:inter-ideograph !important;
+}
+
+body.jp-font {
+    font-family: "Yu Gothic Regular", "YuGothic-Regular";
 }
 
 header {
