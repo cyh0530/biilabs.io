@@ -80,7 +80,7 @@ gulp.task('watch', function () {
 });
 
 gulp.task('webp', () =>
-    gulp.src(['static/assets/**/*.png'])
+    gulp.src(['static/assets/**/*.png', 'static/assets/**/*.jpeg', 'static/assets/**/*.jpg'])
         .pipe(webp())
         .pipe(gulp.dest('dist/webp'))
 );
