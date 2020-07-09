@@ -168,7 +168,6 @@ $(function () {
     }, true);
 
     function tryPlayMileStone() {
-      // console.log("tryPlayMileStone")
       var svgPosY = $('#milestone-svg').offset().top;
       var svgMarginY = parseInt($('#milestone-svg').css('margin-top'));
       var windowHeight = $(window).height();
@@ -178,13 +177,11 @@ $(function () {
       }
     }
     function hideMilestoneText() {
-      console.log("hideMilestoneText")
       var $svg = $('#milestone-svg')
       console.log("$svg.find('text.fade-in')", $svg.find('text.fade-in'))
       $svg.find('text.fade-in').css({ opacity: 0 });
     }
     function showMileStoneText() {
-      // console.log("showMileStoneText")
       var $svg = $('#milestone-svg')
       $svg.find('text.fade-in').animate({ opacity: 1 }, 'slow', 'swing');
     }
