@@ -182,3 +182,32 @@
     }
 
 }
+
+#milestone-svg {
+    .st0, .st1 {
+        fill: none;
+        stroke: #7fceff;
+        stroke-width: 3;
+        stroke-miterlimit: 10
+    }
+
+    .st1 {
+        stroke: #2b9bd6
+    }
+
+    .years-img {
+        height: 160px;
+        width: 160px;
+    }
+
+    text {
+        font-size: 1.8em;
+        fill: #fff;
+    }
+
+    .year {
+        opacity: 1;
+        font-size: 3em;
+        font-weight: 600;
+    }
+}
