@@ -1,7 +1,7 @@
 {
   "name": "bii-labs",
   "version": "0.0.1",
-  "repository": "https://github.com/colman423/bii-labs.git",
+  "repository": "https://github.com/cyh0530/biilabs.io.git",
   "license": "MIT",
   "scripts": {
     "start": "gulp",

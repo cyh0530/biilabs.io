@@ -67,10 +67,11 @@ gulp.task('webserver', function () {
             ]
         },
     })
-    return gulp.src('./')
-        .pipe(open({
-            uri: 'http://localhost:' + server.port
-        }));
+    return gulp.src("./").pipe(
+      open({
+        uri: "http://localhost:" + server.port,
+      })
+    );
 });
 
 gulp.task('watch', function () {
