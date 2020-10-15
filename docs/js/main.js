@@ -28,14 +28,12 @@ $(function () {
   function setNavActive() {
     var pathnames = location.pathname.split('/');
     var pathname = pathnames[pathnames.length - 1] || "index";
-    console.log("pathname", pathnames, pathname, $('a.nav-link[href="' + pathname + '"]'))
     $('a.nav-link[href="' + pathname + '"]').addClass('active')
 
   }
 });
 
 function setLocale(locale) {
-  console.log("setLocale", locale)
   $('.lang-selector').html('<span class="spinner-border" role="status" aria-hidden="true" style="width: 1.5rem; height: 1.5rem;"></span>  <span class="sr-only">Loading...</span>').prop("disabled", true);
 
   if (locale) {

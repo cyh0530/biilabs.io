@@ -128,7 +128,6 @@
         var x = starPosition.x * window.innerWidth;
         var y = starPosition.y * $canvas.height() + $canvas.height() / 2;
         config.stars.push(new Star(x, y));
-        console.log(x, y)
       }
 
       for (; i < length; i++) {

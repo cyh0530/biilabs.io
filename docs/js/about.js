@@ -162,7 +162,6 @@ $(function () {
     $(window).scroll(tryPlayMileStone);
 
     $('#milestone-svg')[0].addEventListener('load', function () {
-      console.log("loaded");
       hideMilestoneText()
       tryPlayMileStone()
     }, true);
@@ -178,7 +177,6 @@ $(function () {
     }
     function hideMilestoneText() {
       var $svg = $('#milestone-svg')
-      console.log("$svg.find('text.fade-in')", $svg.find('text.fade-in'))
       $svg.find('text.fade-in').css({ opacity: 0 });
     }
     function showMileStoneText() {
